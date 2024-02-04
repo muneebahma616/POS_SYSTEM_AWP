@@ -1,0 +1,149 @@
+:root {
+  --aqua: rgb(0, 191, 225);
+  --wining-bloks: #2d214b;
+}
+
+body {
+  background-color: black;
+  background-image: url(https://t3.ftcdn.net/jpg/04/53/61/00/360_F_453610098_zdOp8kYCIUVamtdMpN8Uh6extkLzVvLJ.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transition: 0.3s all ease;
+  transform: translate(-50%, 0);
+
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  /* border: 1px solid red; */
+}
+
+.logo>img {
+  width: 70px;
+  height: 70px;
+  mix-blend-mode: color-burn;
+  filter: brightness(0) invert(1);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-heading {
+  color: rgb(255, 136, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .login-heading {
+    font-size: 1rem;
+  }
+
+  .logo {
+    top: 20%;
+  }
+}
+
+.login-form {
+  background-color: rgba(1, 6, 21, 0.155);
+  /* padding: 0% 50px; */
+  padding: 5%;
+  border-radius: 10px;
+  align-items: center;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 12px;
+  border: 1px solid var(--aqua);
+  height: 20px;
+  width: 93.5%;
+}
+
+.login-btn,
+.admin-btn {
+  padding: 10px 25px;
+  background-color: var(--aqua);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  height: 40px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.login-form>div:nth-child(2),
+.login-form>div:nth-child(3) {
+  width: 100%;
+  position: relative;
+}
+
+.login-form>div>label {
+  transition: 0.3s all ease;
+  color: gray;
+  font-size: 14px;
+  position: absolute;
+  left: 13px;
+  top: 11px;
+  cursor: text;
+  background-color: black;
+}
+
+.login-form>div>.up {
+  top: -9px;
+  left: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, black 50%);
+}
+
+
+.login-btn:hover,
+.admin-btn:hover {
+  background-color: #005cbf;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  /* width: 100%; */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 420px) {
+  .login-form {
+    padding: 10%;
+    width: auto;
+  }
+
+  .login-form div .input {
+    width: 88%;
+  }
+}
